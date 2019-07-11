@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "cz.fmo"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++14"
+                cppFlags "-frtti"
+                cppFlags "-fexceptions"
+                arguments "-DCMAKE_BUILD_TYPE=Release"
+                arguments "-DANDROID_ARM_NEON=TRUE"
+                arguments "-DOpenCV_DIR=" + projectDir.getPath() + "/../OpenCV-android-sdk/sdk/native/jni"
+            }
+        }
+        ndk {
+            abiFilters 'armeabi-v7a' // build for v7 only
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path projectDir.getPath() + "/../fmo-cpp/CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:support-v4:25.3.1'
+}

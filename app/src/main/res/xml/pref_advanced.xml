@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/runBenchmark">
+        <intent android:action="cz.fmo.BenchmarkingActivity"/>
+    </Preference>
+    <Preference android:title="@string/runVideoPlayer">
+        <intent android:action="com.android.grafika.PlayMovieSurfaceActivity"/>
+    </Preference>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="disableDetection"
+        android:title="@string/prefDisableDetection"/>
+</PreferenceScreen>

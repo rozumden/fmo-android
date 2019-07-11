@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:defaultValue="@string/prefCameraFacingDefault"
+        android:entries="@array/prefCameraFacingNames"
+        android:entryValues="@array/prefCameraFacingValues"
+        android:key="cameraFacing"
+        android:title="@string/prefCameraFacing"/>
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/prefResolutionNames"
+        android:entryValues="@array/prefResolutionValues"
+        android:key="resolution"
+        android:title="@string/prefResolution"/>
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/prefRecordModeNames"
+        android:entryValues="@array/prefRecordModeValues"
+        android:key="recordMode"
+        android:title="@string/prefRecordMode"/>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="slowPreview"
+        android:summary="@string/prefSlowPreviewSummary"
+        android:title="@string/prefSlowPreview"/>
+</PreferenceScreen>

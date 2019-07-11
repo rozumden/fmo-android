@@ -1,0 +1,18 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:fragment="cz.fmo.SettingsActivity$CapturePreferenceFragment"
+        android:icon="@drawable/settings_capture"
+        android:title="@string/prefHeaderCapture"/>
+    <header
+        android:fragment="cz.fmo.SettingsActivity$DetectionPreferenceFragment"
+        android:icon="@drawable/settings_detection"
+        android:title="@string/prefHeaderDetection"/>
+    <header
+        android:fragment="cz.fmo.SettingsActivity$VelocityPreferenceFragment"
+        android:icon="@drawable/settings_velocity"
+        android:title="@string/prefHeaderVelocity"/>
+    <header
+        android:fragment="cz.fmo.SettingsActivity$AdvancedPreferenceFragment"
+        android:icon="@drawable/settings_advanced"
+        android:title="@string/prefHeaderAdvanced"/>
+</preference-headers>

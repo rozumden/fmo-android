@@ -1,0 +1,103 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       tools:context="cz.fmo.RecordingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/recording_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:keepScreenOn="true"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/recording_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"/>
+
+        <ImageButton
+            android:id="@+id/recording_clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/clear_detections"
+            android:onClick="onClearDetections"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <ImageButton
+            android:id="@+id/recording_settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/settings"
+            android:onClick="onOpenMenu"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true">
+
+            <Button
+                android:id="@+id/recording_manual_stopped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/record_manual_stopped"
+                android:onClick="onStartManualRecording"
+                android:text="@string/recordingManualStopped"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="@color/recordManualStopped"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/recording_manual_running"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/record_manual_running"
+                android:onClick="onStopManualRecording"
+                android:text="@string/recordingManualRunning"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="@color/recordManualRunning"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/recording_automatic_stopped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/record_automatic_stopped"
+                android:onClick="onForceAutomaticRecording"
+                android:text="@string/recordingAutomaticStopped"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="@color/recordAutomaticStopped"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/recording_automatic_running"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/record_automatic_running"
+                android:onClick="onForceAutomaticRecording"
+                android:text="@string/recordingAutomaticRunning"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:textColor="@color/recordAutomaticRunning"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

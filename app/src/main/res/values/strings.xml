@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">FMO</string>
+
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="play_button_text">Play</string>
+    <string name="stop_button_text">Stop</string>
+
+    <string name="videoLength">%d seconds in buffer</string>
+    <string name="noVideoLength">Buffer is empty</string>
+    <string name="errorPermissionCamera">Camera permission denied</string>
+    <string name="errorPermissionStorage">Storage permission denied</string>
+    <string name="errorCamera">Camera error</string>
+    <string name="saving">Saving…</string>
+    <string name="mainMenuPlayMovieString">Play movie activity</string>
+    <string name="mainMenuPlaybackString">Playback activity</string>
+    <string name="mainMenuBenchmarkingString">Benchmarking activity</string>
+    <string name="mainMenuRecordingString">Recording activity</string>
+    <string name="playbackPickVideo">Open video</string>
+    <string name="recordingManualStopped">REC</string>
+    <string name="recordingManualRunning">REC</string>
+    <string name="recordingAutomaticStopped">AUTO</string>
+    <string name="recordingAutomaticRunning">AUTO</string>
+    <string name="clearDetections">CLEAR</string>
+    <string name="previewToggleOn">PRE ON</string>
+    <string name="previewToggleOff">PRE OFF</string>
+    <string name="recordToggleOn">REC ON</string>
+    <string name="recordToggleOff">REC OFF</string>
+    <string name="hiresToggleOn">1080p</string>
+    <string name="hiresToggleOff">720p</string>
+    <string name="autoToggleOn">AUTO ON</string>
+    <string name="autoToggleOff">AUTO OFF</string>
+    <string name="detectToggleOn">DET ON</string>
+    <string name="detectToggleOff">DET OFF</string>
+    <string name="settings">Settings</string>
+
+    <!-- Capture settings -->
+    <string name="prefHeaderCapture">Video capture</string>
+    <string name="prefCameraFacing">Camera direction</string>
+    <string-array name="prefCameraFacingNames">
+        <item>Front-facing</item>
+        <item>Rear-facing</item>
+    </string-array>
+    <string-array name="prefCameraFacingValues">
+        <item>front</item>
+        <item>rear</item>
+    </string-array>
+    <string name="prefCameraFacingDefault">rear</string>
+    <string name="prefResolution">Resolution</string>
+    <string-array name="prefResolutionNames">
+        <item>720p</item>
+        <item>1080p</item>
+    </string-array>
+    <string-array name="prefResolutionValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="prefRecordMode">Recording</string>
+    <string-array name="prefRecordModeNames">
+        <item>Off</item>
+        <item>Manually controlled</item>
+        <item>Automatically triggered</item>
+    </string-array>
+    <string-array name="prefRecordModeValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="prefSlowPreview">Slow preview</string>
+    <string name="prefSlowPreviewSummary">Update only once in 2 seconds</string>
+
+    <!-- Detection settings -->
+    <string name="prefHeaderDetection">Detection</string>
+    <string name="prefColorSpace">Color space</string>
+    <string-array name="prefColorSpaceNames">
+        <item>Gray</item>
+        <item>Color (YCbCr)</item>
+    </string-array>
+    <string-array name="prefColorSpaceValues">
+        <item>gray</item>
+        <item>yuv</item>
+    </string-array>
+    <string name="prefColorSpaceDefault">yuv</string>
+    <string name="prefProcRes">Processing resolution</string>
+    <string-array name="prefProcResNames">
+        <item>Low (for nearby objects)</item>
+        <item>Default</item>
+        <item>High (for distant objects)</item>
+    </string-array>
+    <string-array name="prefProcResValues">
+        <item>150</item>
+        <item>300</item>
+        <item>600</item>
+    </string-array>
+    <string name="prefProcResDefault">300</string>
+
+    <!-- Velocity estimation settings -->
+    <string name="prefHeaderVelocity">Velocity estimation</string>
+    <string name="prefVelocityEstimationMode">Velocity estimation mode</string>
+    <string-array name="prefVelocityEstimationModeNames">
+        <item>Image plane [px/fr]</item>
+        <item>Real-world [m/s]</item>
+        <item>Real-world [km/h]</item>
+        <item>Real-world [mph]</item>
+    </string-array>
+    <string-array name="prefVelocityEstimationModeValues">
+        <item>pxfr</item>
+        <item>ms</item>
+        <item>kmh</item>
+        <item>mph</item>
+    </string-array>
+    <string name="prefVelocityEstimationModeDefault">pxfr</string>
+    <string name="prefObjectDiameterPicker">Object size based on sport</string>
+    <string-array name="prefObjectDiameterPickerNames">
+        <item>Ping pong</item>
+        <item>Tennis</item>
+        <item>Baseball</item>
+        <item>Golf</item>
+        <item>Floorball</item>
+        <item>Custom object size</item>
+    </string-array>
+    <string-array name="prefObjectDiameterPickerValues">
+        <item>0.040</item>
+        <item>0.067</item>
+        <item>0.073</item>
+        <item>0.04267</item>
+        <item>0.072</item>
+        <item>0</item>
+    </string-array>
+    <string name="prefObjectDiameterCustom">Custom object diameter [m]</string>
+    <string name="prefObjectDiameterCustomDefault">1.00</string>
+    <string name="prefFrameRate">Precise frame rate [Hz]</string>
+    <string name="prefFrameRateDefault">30.00</string>
+
+    <!-- Advanced settings -->
+    <string name="prefHeaderAdvanced">Advanced</string>
+    <string name="runBenchmark">Run benchmark</string>
+    <string name="runVideoPlayer">Run video player</string>
+    <string name="prefDisableDetection">Disable FMO detection</string>
+</resources>
