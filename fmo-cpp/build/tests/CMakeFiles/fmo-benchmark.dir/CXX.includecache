@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../fmo/../include/fmo/benchmark.hpp
+functional
+-
+vector
+-
+
+/home/rozumden/src/fmo-android-denys/fmo-cpp/tests/benchmark-main.cpp
+fmo/benchmark.hpp
+-
+iostream
+-
+

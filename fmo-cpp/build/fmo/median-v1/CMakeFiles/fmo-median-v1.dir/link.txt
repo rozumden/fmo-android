@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfmo-median-v1.a  CMakeFiles/fmo-median-v1.dir/algorithm-median.cpp.o CMakeFiles/fmo-median-v1.dir/components.cpp.o CMakeFiles/fmo-median-v1.dir/objects-find.cpp.o CMakeFiles/fmo-median-v1.dir/objects-match.cpp.o CMakeFiles/fmo-median-v1.dir/objects-select.cpp.o CMakeFiles/fmo-median-v1.dir/output.cpp.o CMakeFiles/fmo-median-v1.dir/visualization.cpp.o
+/usr/bin/ranlib libfmo-median-v1.a
