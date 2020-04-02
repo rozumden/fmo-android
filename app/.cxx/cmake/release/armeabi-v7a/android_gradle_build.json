@@ -1,0 +1,451 @@
+{
+  "stringTable": {
+    "0": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi --gcc-toolchain=/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -isystem /home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/include -isystem /home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/include/opencv -I/home/rozumden/src/fmo-android/fmo-cpp/fmo/../include -isystem /home/rozumden/Android/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/rozumden/Android/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/rozumden/Android/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -std=c++14 -frtti -fexceptions -Wall -Werror -ffast-math -Os -DNDEBUG -Os -DNDEBUG -fPIC -std=c++14",
+    "2": "--target=armv7-none-linux-androideabi --gcc-toolchain=/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -Dfmo_android_EXPORTS -I/home/rozumden/src/fmo-android/fmo-cpp/fmo/../include -isystem /home/rozumden/Android/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /home/rozumden/Android/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /home/rozumden/Android/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -std=c++14 -frtti -fexceptions -Wall -Werror -ffast-math -Os -DNDEBUG -Os -DNDEBUG -fPIC -std=c++14"
+  },
+  "buildFiles": [
+    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVConfig.cmake",
+    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/OpenCVConfig-version.cmake",
+    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/CMakeLists.txt",
+    "/home/rozumden/Android/android-ndk-r14b/build/cmake/android.toolchain.cmake",
+    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/OpenCVConfig.cmake",
+    "/home/rozumden/src/fmo-android/fmo-cpp/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVModules.cmake",
+    "/home/rozumden/src/fmo-android/fmo-cpp/android/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVModules-release.cmake"
+  ],
+  "cleanCommands": [
+    "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "fmo-explorer-v2-Release-armeabi-v7a": {
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v2",
+      "buildType": "release",
+      "toolchain": "194188731",
+      "abi": "armeabi-v7a",
+      "artifactName": "fmo-explorer-v2",
+      "files": [
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/clusters.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/components.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/explorer.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/object.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/preprocess.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/strips.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/visualize.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/explorer.hpp",
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v2/libfmo-explorer-v2.a"
+    },
+    "fmo-android-Release-armeabi-v7a": {
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-android",
+      "buildType": "release",
+      "toolchain": "194188731",
+      "abi": "armeabi-v7a",
+      "artifactName": "fmo-android",
+      "files": [
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/android/java_classes.cpp",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/android/benchmarking.cpp",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/android/recording.cpp",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/android/vertex_gen.cpp",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/android/java_interface.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/android/java_classes.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/android/env.hpp",
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "/home/rozumden/src/fmo-android/app/build/intermediates/cmake/release/obj/armeabi-v7a/libfmo-android.so"
+    },
+    "fmo-explorer-v1-Release-armeabi-v7a": {
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v1",
+      "buildType": "release",
+      "toolchain": "194188731",
+      "abi": "armeabi-v7a",
+      "artifactName": "fmo-explorer-v1",
+      "files": [
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/components.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/explorer.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/object.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/preprocess.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/strips.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/trajectories.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/visualize.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/explorer.hpp",
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v1/libfmo-explorer-v1.a"
+    },
+    "fmo-median-v1-Release-armeabi-v7a": {
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-median-v1",
+      "buildType": "release",
+      "toolchain": "194188731",
+      "abi": "armeabi-v7a",
+      "artifactName": "fmo-median-v1",
+      "files": [
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/algorithm-median.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/components.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/objects-find.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/objects-match.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/objects-select.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/output.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/visualization.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/algorithm-median.hpp",
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/median-v1/libfmo-median-v1.a"
+    },
+    "fmo-core-Release-armeabi-v7a": {
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-core",
+      "buildType": "release",
+      "toolchain": "194188731",
+      "abi": "armeabi-v7a",
+      "artifactName": "fmo-core",
+      "files": [
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/agglomerator.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/algorithm.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/assert.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/benchmark.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/subsampler.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/differentiator.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/image.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/image-util.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/processing-basic.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/processing-median3.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/region.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/stats.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/strip.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/agglomerator.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/agglomerator-impl.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/algebra.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/algorithm.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/allocator.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/assert.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/subsampler.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/differentiator.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/benchmark.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/common.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/exchange.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/image.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/pointset.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/processing.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/region.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/retainer.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/stats.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/include/fmo/strip.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/image-util.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/include-opencv.hpp",
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/include-simd.hpp",
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/libfmo-core.a"
+    },
+    "fmo-explorer-v3-Release-armeabi-v7a": {
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v3",
+      "buildType": "release",
+      "toolchain": "194188731",
+      "abi": "armeabi-v7a",
+      "artifactName": "fmo-explorer-v3",
+      "files": [
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/clusters.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/components.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/explorer.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/object.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/preprocess.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/strips-proto.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/strips-meta.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/visualize.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [
+        {
+          "header": "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/explorer.hpp",
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v3/libfmo-explorer-v3.a"
+    }
+  },
+  "toolchains": {
+    "194188731": {
+      "cppCompilerExecutable": "/home/rozumden/Android/android-ndk-r14b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
