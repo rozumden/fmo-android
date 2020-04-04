@@ -17,6 +17,7 @@ namespace {
         fmo::Image image;
         fmo::Dims dims;
         fmo::Format format;
+        bool front;
         fmo::Algorithm::Config config;
     } global;
 
@@ -47,8 +48,12 @@ namespace {
 
             frameStats.tick();
             sectionStats.start();
+            if(global.front)
+                input.flip();
+
             explorer->setInputSwap(input);
             explorer->getOutput(output);
+
             bool statsUpdated = sectionStats.stop();
 
             if (statsUpdated) {
@@ -59,6 +64,10 @@ namespace {
             if (!output.detections.empty()) {
                 jint numDetections = jint(output.detections.size());
                 DetectionArray detections(env, numDetections);
+
+                std::ostringstream oss;
+                oss << std::fixed << std::setprecision(2) << "Received output, size: " << output.detections.size() << ", id " << output.detections[0]->object.id << ", id0 " << output.detections[0]->predecessor.id;
+                callback.log(oss.str().c_str());
 
                 for (jint i = 0; i < numDetections; i++) {
                     Detection d{env, *output.detections[i]};
@@ -76,7 +85,7 @@ namespace {
 }
 
 void Java_cz_fmo_Lib_detectionStart(JNIEnv* env, jclass, jint width, jint height, jint procRes,
-                                    jboolean gray, jobject cbObj) {
+                                    jboolean gray, jboolean front, jobject cbObj) {
     initJavaClasses(env);
 
     std::unique_lock<std::mutex> lock(global.mutex);
@@ -87,6 +96,7 @@ void Java_cz_fmo_Lib_detectionStart(JNIEnv* env, jclass, jint width, jint height
     global.stop = false;
     global.exchange.reset(new fmo::Exchange<fmo::Image>(global.format, global.dims));
     global.callbackRef = {env, cbObj};
+    global.front = front;
 
     std::thread thread(threadImpl);
     thread.detach();

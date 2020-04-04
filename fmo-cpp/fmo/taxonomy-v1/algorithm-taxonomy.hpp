@@ -86,13 +86,14 @@ namespace fmo {
             cv::Point2f start = {0, 0};
             Dims size = {0, 0};
         public:
-            virtual const void draw(cv::Mat& img) const { if(curve != nullptr) curve->draw(img); }
-            virtual const void drawSmooth(cv::Mat& img) const { if(curve != nullptr) curve->drawSmooth(img); }
+//            virtual const void draw(cv::Mat& img) const { if(curve != nullptr) curve->draw(img); }
+//            virtual const void drawSmooth(cv::Mat& img) const { if(curve != nullptr) curve->drawSmooth(img); }
             void calcIoU();
         };
 
         /// Object data.
         struct Object {
+            int id = -1;
             Pos center = {0, 0};         ///< midpoint
             NormVector direction;        ///< principal direction
             float length = 0;            ///< length in principal direction
@@ -100,11 +101,13 @@ namespace fmo {
             float velocity = 0;             ///< in radii per exposure
             SCurve * curve = nullptr;
             SCurve * curveSmooth = nullptr;
+            int prevId = -1;
+            Pos prevCenter = {0,0};
         };
 
         struct MyDetection : public Detection {
             virtual ~MyDetection() override = default;
-            MyDetection(const Detection::Object& detObj, 
+            MyDetection(const Detection::Object& detObj, const Detection::Predecessor& detPrev,
                         const TaxonomyV1::Object* obj, TaxonomyV1* aMe);
             virtual void getPoints(PointSet& out) const override;
 
@@ -165,6 +168,7 @@ namespace fmo {
         } mProcessingLevel;
 
         struct {
+            std::vector<std::unique_ptr<Image>> subsampled; ///< cached decimation steps
             Image image;                ///< cached decimation step
             Image visualized;           ///< debug visualization
             Image visualizedFull;       ///< debug visualization full size
@@ -177,6 +181,7 @@ namespace fmo {
             Image binDiffInv;
         } mCache;
 
+        Subsampler mSubsampler;              ///< decimation tool that handles YUV420SP image format
         Differentiator mDiff;               ///< for creating the binary difference image
         std::vector<Component> mComponents; ///< connected components
         std::vector<Component> mPrevComponents; ///< connected components

@@ -18,7 +18,7 @@ public final class Lib {
      * @param gray do the processing in gray scale
      * @param cb callback to report events to
      */
-    public static native void detectionStart(int width, int height, int procRes, boolean gray,
+    public static native void detectionStart(int width, int height, int procRes, boolean gray, boolean front,
                                              @NonNull Callback cb);
 
     public static native void detectionFrame(byte[] dataYUV420SP);

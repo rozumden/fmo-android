@@ -6,6 +6,7 @@ tests/CMakeFiles/fmo-test.dir/test-algebra.cpp.o: ../fmo/../include/fmo/common.h
 tests/CMakeFiles/fmo-test.dir/test-algebra.cpp.o: ../catch/catch.hpp
 tests/CMakeFiles/fmo-test.dir/test-algebra.cpp.o: ../tests/test-algebra.cpp
 
+tests/CMakeFiles/fmo-test.dir/test-convert.cpp.o: ../fmo/../include/fmo/algebra.hpp
 tests/CMakeFiles/fmo-test.dir/test-convert.cpp.o: ../fmo/../include/fmo/allocator.hpp
 tests/CMakeFiles/fmo-test.dir/test-convert.cpp.o: ../fmo/../include/fmo/common.hpp
 tests/CMakeFiles/fmo-test.dir/test-convert.cpp.o: ../fmo/../include/fmo/image.hpp
@@ -19,6 +20,7 @@ tests/CMakeFiles/fmo-test.dir/test-data.cpp.o: ../fmo/../include/fmo/common.hpp
 tests/CMakeFiles/fmo-test.dir/test-data.cpp.o: ../tests/test-data.cpp
 tests/CMakeFiles/fmo-test.dir/test-data.cpp.o: ../tests/test-data.hpp
 
+tests/CMakeFiles/fmo-test.dir/test-load.cpp.o: ../fmo/../include/fmo/algebra.hpp
 tests/CMakeFiles/fmo-test.dir/test-load.cpp.o: ../fmo/../include/fmo/allocator.hpp
 tests/CMakeFiles/fmo-test.dir/test-load.cpp.o: ../fmo/../include/fmo/common.hpp
 tests/CMakeFiles/fmo-test.dir/test-load.cpp.o: ../fmo/../include/fmo/image.hpp
@@ -31,6 +33,7 @@ tests/CMakeFiles/fmo-test.dir/test-load.cpp.o: ../tests/test-tools.hpp
 tests/CMakeFiles/fmo-test.dir/test-main.cpp.o: ../catch/catch.hpp
 tests/CMakeFiles/fmo-test.dir/test-main.cpp.o: ../tests/test-main.cpp
 
+tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o: ../fmo/../include/fmo/algebra.hpp
 tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o: ../fmo/../include/fmo/allocator.hpp
 tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o: ../fmo/../include/fmo/common.hpp
 tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o: ../fmo/../include/fmo/image.hpp
@@ -41,6 +44,7 @@ tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o: ../tests/test-data.hpp
 tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o: ../tests/test-processing.cpp
 tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o: ../tests/test-tools.hpp
 
+tests/CMakeFiles/fmo-test.dir/test-region.cpp.o: ../fmo/../include/fmo/algebra.hpp
 tests/CMakeFiles/fmo-test.dir/test-region.cpp.o: ../fmo/../include/fmo/allocator.hpp
 tests/CMakeFiles/fmo-test.dir/test-region.cpp.o: ../fmo/../include/fmo/common.hpp
 tests/CMakeFiles/fmo-test.dir/test-region.cpp.o: ../fmo/../include/fmo/image.hpp

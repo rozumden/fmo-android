@@ -29,7 +29,8 @@ namespace fmo {
         buf.setTo(uint8_t(0));
         
         this->curve->shift = {this->start.x,this->start.y};
-        this->curve->draw(buf, 1, thickness);
+        cv::Scalar clr = cv::Scalar{1};
+        this->curve->draw(buf, clr, thickness);
         this->curve->shift = {0,0};
 
         int inters = 0;
@@ -192,7 +193,6 @@ namespace fmo {
                     maxScore = s;
                 }
             }
-
             if (maxScore == 0) continue;
             comp.curveSmooth = mPrevComponents[ind].curve->clone();
 
@@ -208,12 +208,21 @@ namespace fmo {
             Object o;
     		o.center = Pos{(int)(comp.center[0]/mProcessingLevel.scale),
     					   (int)(comp.center[1]/mProcessingLevel.scale)};
-    		o.direction = NormVector{comp.line.normal.x,comp.line.normal.y};
-    		o.length = comp.len/mProcessingLevel.scale; 
+//            o.direction = NormVector{comp.line.normal.x,comp.line.normal.y};
+            auto dir = comp.curve->end - comp.curve->start;
+            o.direction = NormVector{dir.x,dir.y};
+    		o.length = comp.len/mProcessingLevel.scale;
     		o.radius = comp.radius/mProcessingLevel.scale;
             o.curve = comp.curve;
             o.curveSmooth = comp.curveSmooth;
             o.velocity = comp.len / (o.radius+1.5); // in radii per exposure
+            o.id = mProcessingLevel.objectCounter++;
+            comp.id = o.id;
+            if(mPrevComponents[ind].status == Component::FMO) {
+                o.prevId = mPrevComponents[ind].id;
+                o.prevCenter =  Pos{(int)(mPrevComponents[ind].center[0]/mProcessingLevel.scale),
+                                 (int)(mPrevComponents[ind].center[1]/mProcessingLevel.scale)};
+            }
 
             mObjects.push_back(o);
     	}

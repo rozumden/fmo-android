@@ -7,6 +7,7 @@ tests/CMakeFiles/fmo-test.dir/test-algebra.cpp.o
  /home/rozumden/src/fmo-android-denys/fmo-cpp/catch/catch.hpp
  /home/rozumden/src/fmo-android-denys/fmo-cpp/tests/test-algebra.cpp
 tests/CMakeFiles/fmo-test.dir/test-convert.cpp.o
+ ../fmo/../include/fmo/algebra.hpp
  ../fmo/../include/fmo/allocator.hpp
  ../fmo/../include/fmo/common.hpp
  ../fmo/../include/fmo/image.hpp
@@ -20,6 +21,7 @@ tests/CMakeFiles/fmo-test.dir/test-data.cpp.o
  /home/rozumden/src/fmo-android-denys/fmo-cpp/tests/test-data.cpp
  /home/rozumden/src/fmo-android-denys/fmo-cpp/tests/test-data.hpp
 tests/CMakeFiles/fmo-test.dir/test-load.cpp.o
+ ../fmo/../include/fmo/algebra.hpp
  ../fmo/../include/fmo/allocator.hpp
  ../fmo/../include/fmo/common.hpp
  ../fmo/../include/fmo/image.hpp
@@ -32,6 +34,7 @@ tests/CMakeFiles/fmo-test.dir/test-main.cpp.o
  /home/rozumden/src/fmo-android-denys/fmo-cpp/catch/catch.hpp
  /home/rozumden/src/fmo-android-denys/fmo-cpp/tests/test-main.cpp
 tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o
+ ../fmo/../include/fmo/algebra.hpp
  ../fmo/../include/fmo/allocator.hpp
  ../fmo/../include/fmo/common.hpp
  ../fmo/../include/fmo/image.hpp
@@ -42,6 +45,7 @@ tests/CMakeFiles/fmo-test.dir/test-processing.cpp.o
  /home/rozumden/src/fmo-android-denys/fmo-cpp/tests/test-processing.cpp
  /home/rozumden/src/fmo-android-denys/fmo-cpp/tests/test-tools.hpp
 tests/CMakeFiles/fmo-test.dir/test-region.cpp.o
+ ../fmo/../include/fmo/algebra.hpp
  ../fmo/../include/fmo/allocator.hpp
  ../fmo/../include/fmo/common.hpp
  ../fmo/../include/fmo/image.hpp

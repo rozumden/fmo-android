@@ -2,19 +2,20 @@
 #define FMO_PROCESSING_HPP
 
 #include <fmo/image.hpp>
-#include <opencv2/core.hpp>
+//#include <opencv2/core.hpp>
 #include <iostream>
+#include <fmo/algebra.hpp>
 
-//namespace cv {
-//    template<typename _Tp> class Point_;
-//    template<typename _Tp, int cn> class Vec;
-//    template<typename _Tp> class Scalar_;
-//
-//    typedef Point_<float> Point2f;
-//    typedef Vec<float, 2> Vec2f;
-//    typedef Vec<float, 4> Vec4f;
-//    typedef Scalar_<double> Scalar;
-//}
+namespace cv {
+    template<typename _Tp> class Point_;
+    template<typename _Tp, int cn> class Vec;
+    template<typename _Tp> class Scalar_;
+
+    typedef Point_<float> Point2f;
+    typedef Vec<float, 2> Vec2f;
+    typedef Vec<float, 4> Vec4f;
+    typedef Scalar_<double> Scalar;
+}
 
 namespace fmo {
      /// Fitting curve
@@ -25,14 +26,14 @@ namespace fmo {
 
     public:
         double scale = 1;
-        cv::Point2f shift{0,0};
+        Vector2f shift{0,0};
         float length = 0;
-        cv::Point2f start{0, 0};
-        cv::Point2f end{0, 0};
-        cv::Point2f center{0, 0};
+        Vector2f start{0,0};
+        Vector2f end{0,0};
+        Vector2f center{0,0};
 
-        virtual void draw(cv::Mat& cvVis, cv::Scalar clr = cv::Scalar{0,0,0}, float thickness = 1) const { };
-        virtual void drawSmooth(cv::Mat& cvVis, cv::Scalar clr = cv::Scalar{0,0,0}, float thickness = 1) const { };
+        virtual void draw(cv::Mat& cvVis, cv::Scalar &clr, float thickness = 1) const { };
+        virtual void drawSmooth(cv::Mat& cvVis, cv::Scalar &clr, float thickness = 1) const { };
         virtual float maxDist(const std::vector<cv::Point2f>& pixels) const { return 0; };
         virtual SCurve* clone() const {
             return new SCurve(*this);
@@ -42,16 +43,16 @@ namespace fmo {
     struct SLine : SCurve
     {
         SLine() {}
-        cv::Vec4f params{0, 0, 0, 0};
-        cv::Point2f normal{0, 0};
-        cv::Point2f perp{0,0};
+        Vector4f params{0,0,0,0};
+        Vector2f normal{0,0};
+        Vector2f perp{0,0};
 
-        cv::Point2f startSmooth{0, 0};
-        cv::Point2f endSmooth{0, 0};
+        Vector2f startSmooth{0,0};
+        Vector2f endSmooth{0,0};
 
     public:
-        virtual void draw(cv::Mat& cvVis, cv::Scalar clr, float thickness) const override;
-        virtual void drawSmooth(cv::Mat& cvVis, cv::Scalar clr, float thickness) const override;
+        virtual void draw(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const override;
+        virtual void drawSmooth(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const override;
         virtual float maxDist(const std::vector<cv::Point2f>& pixels) const override;
         virtual SCurve* clone() const override {
             return new SLine(*this);
@@ -73,8 +74,8 @@ namespace fmo {
         double size{0};
 
     public:
-        virtual void draw(cv::Mat& cvVis, cv::Scalar clr, float thickness) const override;
-        virtual void drawSmooth(cv::Mat& cvVis, cv::Scalar clr, float thickness) const override;
+        virtual void draw(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const override;
+        virtual void drawSmooth(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const override;
         virtual float maxDist(const std::vector<cv::Point2f>& pixels) const override;
         virtual SCurve* clone() const override {
             return new SCircle(*this);
@@ -126,6 +127,9 @@ namespace fmo {
 
     /// Resizes an image exactly.
     void subsample_resize(const Mat& src, Mat& dst, float scale);
+
+    /// Resizes an YUV image exactly.
+    void subsample_resize_yuv(const Mat& src, Mat& dst, float scale);
 
     /// Calculates the per-pixel median of three images.
     void median3(const Image& src1, const Image& src2, const Image& src3, Image& dst);

@@ -353,11 +353,7 @@ void DemoVisualizer::onDetection(const Status& s, const fmo::Algorithm::Detectio
     mLastDetectFrame = s.outFrameNum;
 
     // don't add a segment if there is no previous center
-    if (detection.predecessor.haveCenter()) {  
-        fmo::Bounds segment = {detection.predecessor.center, detection.object.center};
-        mSegments.push_back(segment);
-        // std::cout << "-----------------------------\n";
-    } else if (detection.object.curve != nullptr) {
+    if (detection.object.curve != nullptr) {
         fmo::SCurve *c = detection.object.curve->clone();
         c->scale = detection.object.scale;
         mCurves.push_back(c);
@@ -383,7 +379,11 @@ void DemoVisualizer::onDetection(const Status& s, const fmo::Algorithm::Detectio
         }
 
         std::sort(mLastSpeeds.begin(), mLastSpeeds.end(), std::greater <>());
-    }
+    } else if (detection.predecessor.haveCenter()) {  
+        fmo::Bounds segment = {detection.predecessor.center, detection.object.center};
+        mSegments.push_back(segment);
+        // std::cout << "-----------------------------\n";
+    } 
 
     float mSpeedNow = 0;
     for(auto& elv : mLastSpeeds) {

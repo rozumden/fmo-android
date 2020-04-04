@@ -274,6 +274,38 @@ namespace fmo {
         cv::resize(srcMat, dstMat, cv::Size(dstDims.width, dstDims.height), 0, 0, cv::INTER_AREA);
     }
 
+    void subsample_resize_yuv(const Mat& src, Mat& dst, float scale) {
+        if (src.format() != Format::YUV420SP) {
+            throw std::runtime_error("downscale: source should be YUV420SP");
+        }
+
+        // prepare output buffers
+        Dims srcDims = src.dims();
+        int w = round(srcDims.width * scale);
+        int h = round(srcDims.height * scale);
+        Dims dstDims = {w, h};
+        Image y, u, v;
+
+        cv::Size cvSrcSize{srcDims.width, srcDims.height};
+        cv::Size cvDstSize{dstDims.width, dstDims.height};
+        dst.resize(Format::YUV, dstDims);
+        y.resize(Format::GRAY, dstDims);
+        u.resize(Format::GRAY, dstDims);
+        v.resize(Format::GRAY, dstDims);
+        cv::Mat cvDst[3] = {y.wrap(), u.wrap(), v.wrap()};
+
+        // create Y channel by decimation
+        cv::Mat cvSrcY{cvSrcSize, CV_8UC1, const_cast<uint8_t*>(src.data())};
+        cv::resize(cvSrcY, cvDst[0], cvDstSize, 0, 0, cv::INTER_AREA);
+
+        // create channels U, V by splitting
+        cv::Mat cvSrcUV{cvDstSize, CV_8UC2, const_cast<uint8_t*>(src.uvData())};
+        cv::split(cvSrcUV, cvDst + 1);
+
+        // create the result by merging
+        cv::merge(cvDst, 3, dst.wrap());
+    }
+
     void subsample_resize(const Mat& src, Mat& dst, float scale) {
         if (src.format() == Format::YUV420SP) {
             throw std::runtime_error("downscale: source cannot be YUV420SP");
@@ -296,7 +328,7 @@ namespace fmo {
 
         srcMat.cols &= ~1;
         srcMat.rows &= ~1;
-       
+
         cv::resize(srcMat, dstMat, cv::Size(dstDims.width, dstDims.height), 0, 0, cv::INTER_LINEAR);
     }
 }

@@ -107,7 +107,9 @@ namespace fmo {
 
             comp.curve->scale = mProcessingLevel.scale;
             if(!cont) {
-                comp.draw(cvVisFull);
+                if(comp.curve != nullptr)
+                    comp.curve->draw(cvVisFull, objColor, 1);
+
                 if(comp.curveSmooth != nullptr) {
                     comp.curveSmooth->scale = mProcessingLevel.scale;
                     comp.curveSmooth->drawSmooth(cvVisFull, objColor, 1);

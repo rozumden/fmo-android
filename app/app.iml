@@ -119,6 +119,12 @@
     <content url="file://$MODULE_DIR$/../fmo-cpp/fmo/median-v1">
       <sourceFolder url="file://$MODULE_DIR$/../fmo-cpp/fmo/median-v1" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../fmo-cpp/fmo/median-v2">
+      <sourceFolder url="file://$MODULE_DIR$/../fmo-cpp/fmo/median-v2" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../fmo-cpp/fmo/taxonomy-v1">
+      <sourceFolder url="file://$MODULE_DIR$/../fmo-cpp/fmo/taxonomy-v1" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: com.android.support:support-annotations:25.4.0@jar" level="project" />

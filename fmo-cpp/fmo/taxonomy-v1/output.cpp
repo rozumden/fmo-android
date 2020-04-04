@@ -21,33 +21,41 @@ namespace fmo {
     }
 
     void TaxonomyV1::getOutput(Output &out, bool smoothTrajecotry) {
-        out.clear();
-        Detection::Object detObj;
+         out.clear();
+         Detection::Object detObj;
          for (auto& o : mObjects) {
-            detObj.center = o.center;
-            detObj.direction[0] = o.direction.y;
-            detObj.direction[1] = o.direction.x;
-            detObj.length = 4.f * o.length;
+             detObj.id = o.id;
+             detObj.center = o.center;
+             detObj.direction[0] = o.direction.y;
+             detObj.direction[1] = o.direction.x;
+             detObj.length = 4.f * o.length;
 
-            if(smoothTrajecotry) {
-                detObj.curve = o.curveSmooth->clone();
-            } else {
-                detObj.curve = o.curve->clone();
-            }
-            detObj.curve->scale = mProcessingLevel.scale;
+             if(smoothTrajecotry) {
+                 detObj.curve = o.curveSmooth->clone();
+             } else {
+                 detObj.curve = o.curve->clone();
+             }
+             detObj.curve->scale = mProcessingLevel.scale;
 
-            detObj.scale = mProcessingLevel.scale;
-            detObj.radius = o.radius;
-            detObj.velocity = o.velocity;
+             detObj.scale = mProcessingLevel.scale;
+             detObj.radius = o.radius;
+             detObj.velocity = o.velocity;
 
-            out.detections.emplace_back();
-            out.detections.back().reset(new MyDetection(detObj, &o, this));
-        }
+             out.detections.emplace_back();
+             if(o.prevId == -1)
+                 out.detections.back().reset(new MyDetection(detObj, Detection::Predecessor(), &o, this));
+             else {
+                 Detection::Predecessor detPrev;
+                 detPrev.id = o.prevId;
+                 detPrev.center = o.prevCenter;
+                 out.detections.back().reset(new MyDetection(detObj, detPrev, &o, this));
+             }
+         }
     }
 
-    TaxonomyV1::MyDetection::MyDetection(const Detection::Object& detObj,
+    TaxonomyV1::MyDetection::MyDetection(const Detection::Object& detObj, const Detection::Predecessor& detPrev,
                                        const TaxonomyV1::Object* obj, TaxonomyV1* aMe)
-        : Detection(detObj, Detection::Predecessor()), me(aMe), mObj(obj) {}
+        : Detection(detObj, detPrev), me(aMe), mObj(obj) {}
 
     void TaxonomyV1::MyDetection::getPoints(PointSet& out) const {
         // adjust rasterized object size
@@ -65,7 +73,8 @@ namespace fmo {
         buf.setTo(uint8_t(0x00));
         
         object.curve->shift = {(float)b.min.x,(float)b.min.y};
-        object.curve->draw(buf, 0xFF, thickness);
+        cv::Scalar clr = cv::Scalar{0xFF};
+        object.curve->draw(buf, clr, thickness);
         object.curve->shift = {0,0};
 
         // output non-zero points

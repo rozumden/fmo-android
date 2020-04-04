@@ -34,8 +34,8 @@ namespace fmo {
 
             if (angleGood1 && angleGood2) {
                 NormVector motionDirection{motion};
-                float sin1 = abs(cross(motionDirection, o1.direction));
-                float sin2 = abs(cross(motionDirection, o2.direction));
+                float sin1 = std::abs(cross(motionDirection, o1.direction));
+                float sin2 = std::abs(cross(motionDirection, o2.direction));
                 angle = std::max(sin1, sin2);
 
                 if (angle > mCfg.matchAngleMax) {

@@ -1,6 +1,8 @@
 #include "image-util.hpp"
 #include <fmo/assert.hpp>
 #include <fmo/region.hpp>
+#include <fmo/image.hpp>
+
 
 namespace fmo {
     Image::Image(const std::string& filename, Format format) {
@@ -83,5 +85,9 @@ namespace fmo {
     cv::Mat Image::wrap() const {
         auto* ptr = const_cast<uint8_t*>(mData.data());
         return {getCvSize(mFormat, mDims), getCvType(mFormat), ptr};
+    }
+
+    void Image::flip() {
+        do_flip = true;
     }
 }

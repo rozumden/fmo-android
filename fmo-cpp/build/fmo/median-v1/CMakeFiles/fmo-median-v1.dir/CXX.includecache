@@ -87,9 +87,9 @@ vector
 ../fmo/../include/fmo/processing.hpp
 fmo/image.hpp
 -
-opencv2/core.hpp
--
 iostream
+-
+fmo/algebra.hpp
 -
 
 ../fmo/../include/fmo/stats.hpp

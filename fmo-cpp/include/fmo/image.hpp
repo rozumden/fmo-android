@@ -122,6 +122,12 @@ namespace fmo {
         /// only for reading.
         virtual cv::Mat wrap() const override;
 
+        /// Flips the image
+        void flip();
+
+    public:
+        bool do_flip = false;
+
     private:
         std::vector<uint8_t, fmo::detail::aligned_allocator<uint8_t, 32>> mData;
     };

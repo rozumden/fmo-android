@@ -14,6 +14,12 @@ limits
 vector
 -
 
+../fmo/../include/fmo/algebra.hpp
+fmo/common.hpp
+-
+math.h
+-
+
 ../fmo/../include/fmo/algorithm.hpp
 fmo/differentiator.hpp
 -
@@ -89,9 +95,9 @@ vector
 ../fmo/../include/fmo/processing.hpp
 fmo/image.hpp
 -
-opencv2/core.hpp
--
 iostream
+-
+fmo/algebra.hpp
 -
 
 ../fmo/../include/fmo/region.hpp
@@ -187,6 +193,8 @@ fmo/assert.hpp
 -
 fmo/region.hpp
 -
+fmo/image.hpp
+-
 
 /home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/include-opencv.hpp
 opencv2/core/version.hpp
@@ -234,6 +242,8 @@ fmo/processing.hpp
 fmo/region.hpp
 -
 iostream
+-
+fmo/algebra.hpp
 -
 
 /home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/processing-median3.cpp

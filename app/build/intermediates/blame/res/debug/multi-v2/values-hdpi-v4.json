@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/rozumden/.gradle/caches/transforms-2/files-2.1/e13f48b7ebb5dd2f2830de2c7b895c31/appcompat-v7-25.4.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

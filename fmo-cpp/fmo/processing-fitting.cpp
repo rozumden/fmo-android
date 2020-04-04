@@ -3,8 +3,29 @@
 #include <fmo/processing.hpp>
 #include <fmo/region.hpp>
 #include <iostream>
+#include <fmo/algebra.hpp>
+
 
 namespace fmo {
+    cv::Point2f Vector2f::wrap() const {
+        return cv::Point2f(x,y);
+    }
+
+    Vector2f::Vector2f(const cv::Point2f &pnt) {
+        x = pnt.x;
+        y = pnt.y;
+    }
+
+    cv::Vec4f Vector4f::wrap() const {
+        return cv::Vec4f(x,y,z,p);
+    }
+
+    Vector4f::Vector4f(const cv::Vec4f &pnt) {
+        x = pnt.val[0];
+        y = pnt.val[1];
+        z = pnt.val[2];
+        p = pnt.val[3];
+    }
 //////////////////////////////////// CIRCLE ////////////////////////////////////////////////////////////////////
 
     float verifyCircle(const std::vector<cv::Point2f>& pixels, const cv::Point2f &center,
@@ -188,30 +209,32 @@ namespace fmo {
     
     float fitline(const std::vector<cv::Point2f>& pixels, const float radius, SLine &line) {
         float inlierT = std::max(1.f,0.2f*radius);
-        cv::fitLine(pixels, line.params, CV_DIST_L2, 0, 0.1, 0.1);
-        line.normal.x = line.params[0];
-        line.normal.y = line.params[1];
-        line.normal = line.normal / norm(line.normal);
+        auto temp = line.params.wrap();
+        cv::fitLine(pixels, temp, CV_DIST_L2, 0, 0.1, 0.1);
+        line.params = temp;
+        line.normal.x = line.params.x;
+        line.normal.y = line.params.y;
+        line.normal = line.normal / norm(line.normal.wrap());
         
         line.perp.x = line.normal.y; 
         line.perp.y = -line.normal.x;
 
-        line.start.x = line.params[2];
-        line.start.y = line.params[3];
-        line.end = line.start + 5*radius*line.normal;
+        line.start.x = line.params.z;
+        line.start.y = line.params.p;
+        line.end = line.start + 5*radius*line.normal.wrap();
 
-        cv::Point2f origin = line.start + 1000*line.normal;
+        cv::Point2f origin = line.start.wrap() + 1000*line.normal.wrap();
 
         float minDist = std::numeric_limits<float>::infinity();
         float maxDist = 0;
         float score = 0;
 
         for (auto& p : pixels) {
-            float e = distanceToLineVec(line.start,line.normal,cv::Vec2f{p.x,p.y});
+            float e = distanceToLineVec(line.start.wrap(),line.normal.wrap(),cv::Vec2f{p.x,p.y});
             if (e <= inlierT) 
                 score += 1 - (e/inlierT);
 
-            cv::Point2f p2 = p + e*line.perp;
+            cv::Point2f p2 = p + e*line.perp.wrap();
             float dist = norm(origin - p2);
             if(dist > maxDist) {
                 maxDist = dist;
@@ -222,9 +245,9 @@ namespace fmo {
                 line.start = p2;
             }
         }
-        line.length = cv::norm(line.start - line.end);
-        line.startSmooth = line.start + radius*line.normal;
-        line.endSmooth = line.end - radius*line.normal;
+        line.length = cv::norm((line.start - line.end).wrap());
+        line.startSmooth = line.start + radius*line.normal.wrap();
+        line.endSmooth = line.end - radius*line.normal.wrap();
         line.center = (line.start + line.end)/2;
 
         return score;
@@ -233,33 +256,35 @@ namespace fmo {
     float fitline(const std::vector<cv::Point2f>& pixels, const float radius, SLine &line,
                     const cv::Vec2f &c1, const cv::Vec2f &c2) {
         float inlierT = std::max(1.f,0.2f*radius);
-        cv::fitLine(pixels, line.params, CV_DIST_L2, 0, 0.1, 0.1);
-        line.normal.x = line.params[0];
-        line.normal.y = line.params[1];
-        line.normal = line.normal / norm(line.normal);
+        auto temp = line.params.wrap();
+        cv::fitLine(pixels, temp, CV_DIST_L2, 0, 0.1, 0.1);
+        line.params = temp;
+        line.normal.x = line.params.x;
+        line.normal.y = line.params.y;
+        line.normal = line.normal / norm(line.normal.wrap());
 
         line.perp.x = line.normal.y;
         line.perp.y = -line.normal.x;
 
-        line.start.x = line.params[2];
-        line.start.y = line.params[3];
-        line.end = line.start + 5*radius*line.normal;
+        line.start.x = line.params.z;
+        line.start.y = line.params.p;
+        line.end = line.start + 5*radius*line.normal.wrap();
 
         float score = 0;
 
         for (auto& p : pixels) {
-            float e = distanceToLineVec(line.start,line.normal,cv::Vec2f{p.x,p.y});
+            float e = distanceToLineVec(line.start.wrap(),line.normal.wrap(),cv::Vec2f{p.x,p.y});
             if (e <= inlierT)
                 score += 1 - (e/inlierT);
         }
 
-        float e = distanceToLineVec(line.start,line.normal,c1);
-        line.start = cv::Point2f{c1} + e*line.perp;
+        float e = distanceToLineVec(line.start.wrap(),line.normal.wrap(),c1);
+        line.start = cv::Point2f{c1} + e*line.perp.wrap();
 
-        e = distanceToLineVec(line.start,line.normal,c2);
-        line.end = cv::Point2f{c2} + e*line.perp;
+        e = distanceToLineVec(line.start.wrap(),line.normal.wrap(),c2);
+        line.end = cv::Point2f{c2} + e*line.perp.wrap();
 
-        line.length = cv::norm(line.start - line.end);
+        line.length = cv::norm(line.start.wrap() - line.end.wrap());
         line.startSmooth = line.start;
         line.endSmooth = line.end;
         line.center = (line.start + line.end)/2;
@@ -329,17 +354,17 @@ namespace fmo {
     /////////////////////////// Drawing //////////////////////////////////
     // line
 
-    void SLine::draw(cv::Mat& cvVis, cv::Scalar clr, float thickness) const {
-        if(norm(clr) == 0) clr = cv::Scalar{255,0,255};
-        if (abs(start.x)+abs(start.y) != 0) {
-            cv::line(cvVis, start/scale - shift, end/scale - shift, clr, thickness);
+    void SLine::draw(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const {
+//        if(clr == nullptr) *clr = cv::Scalar{255,0,255};
+        if (std::abs(start.x)+std::abs(start.y) != 0) {
+            cv::line(cvVis, start.wrap()/scale - shift.wrap(), end.wrap()/scale - shift.wrap(), clr, thickness);
         }
     }
 
-    void SLine::drawSmooth(cv::Mat& cvVis, cv::Scalar clr, float thickness) const {
-        if(norm(clr) == 0) clr = cv::Scalar{255,0,255};
-        if (abs(start.x)+abs(start.y) != 0) {
-            cv::line(cvVis, startSmooth/scale - shift, endSmooth/scale - shift, clr, thickness);
+    void SLine::drawSmooth(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const {
+//        if(clr == nullptr) *clr = cv::Scalar{255,0,255};
+        if (std::abs(start.x)+std::abs(start.y) != 0) {
+            cv::line(cvVis, startSmooth.wrap()/scale - shift.wrap(), endSmooth.wrap()/scale - shift.wrap(), clr, thickness);
         }
     }
 
@@ -357,22 +382,22 @@ namespace fmo {
 
     // circle
 
-    void SCircle::draw(cv::Mat& cvVis, cv::Scalar clr, float thickness) const {
-        if(norm(clr) == 0) clr = cv::Scalar{0,255,255};
+    void SCircle::draw(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const {
+//        if(clr == nullptr) *clr = cv::Scalar{0,255,255};
         if(radius > 0) {
             cv::Size sz{(int)round(radius/scale),(int)round(radius/scale)};
             cv::Point2f cntr{x,y};
-            cv::ellipse(cvVis, cntr/scale - shift, sz, 0, startDegree, endDegree, clr, thickness);
+            cv::ellipse(cvVis, cntr/scale - shift.wrap(), sz, 0, startDegree, endDegree, clr, thickness);
 //            cv::putText(cvVis, std::to_string((int)this->size), this->center, cv::FONT_HERSHEY_PLAIN, 1, clr);
         }
     }
 
-    void SCircle::drawSmooth(cv::Mat& cvVis, cv::Scalar clr, float thickness) const {
-        if(norm(clr) == 0) clr = cv::Scalar{0,255,255};
+    void SCircle::drawSmooth(cv::Mat& cvVis, cv::Scalar &clr, float thickness) const {
+//        if(clr == nullptr) *clr = cv::Scalar{0,255,255};
         if(radius > 0) {
             cv::Size sz{(int)round(radius/scale),(int)round(radius/scale)};
             cv::Point2f cntr{x,y};
-            cv::ellipse(cvVis, cntr/scale - shift, sz, 0, startDegreeSmooth, endDegreeSmooth, clr, thickness);
+            cv::ellipse(cvVis, cntr/scale - shift.wrap(), sz, 0, startDegreeSmooth, endDegreeSmooth, clr, thickness);
         }
     }
 
@@ -380,7 +405,7 @@ namespace fmo {
         float maxDist = 0;
         cv::Point2f cnt{this->x, this->y};
         for (auto &p : pixels) {
-            float dist = abs(cv::norm(p - cnt) - radius);
+            float dist = std::abs(cv::norm(p - cnt) - radius);
             if(dist > maxDist) maxDist = dist;
         }
         return maxDist;
@@ -394,4 +419,5 @@ namespace fmo {
 //        cv::Mat alphaMat = (1-alpha)*(temp > 0)/255 + (temp == 0)/255;
 //        cvVis = cvVis.mul(alphaMat) + alpha*temp;
 //    };
+
 }

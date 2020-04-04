@@ -4,8 +4,41 @@
 #include <fmo/common.hpp>
 #include <math.h>
 
+namespace cv {
+    template<typename _Tp> class Point_;
+    template<typename _Tp, int cn> class Vec;
+    typedef Point_<float> Point2f;
+    typedef Vec<float, 4> Vec4f;
+}
+
 namespace fmo {
+    struct Vector4f {
+        constexpr Vector4f(float aX, float aY, float aZ, float aP) : x(aX), y(aY), z(aZ), p(aP) {}
+
+        Vector4f(const Vector4f&) = default;
+        Vector4f(const cv::Vec4f&);
+        Vector4f& operator=(const Vector4f&) = default;
+
+        // data
+        float x, y, z, p;
+    public:
+        cv::Vec4f wrap() const;
+    };
+
     /// Vector in 2D euclidean coordinates.
+    struct Vector2f {
+        constexpr Vector2f(float aX, float aY) : x(aX), y(aY) {}
+
+        Vector2f(const Vector2f&) = default;
+        Vector2f(const cv::Point2f&);
+        Vector2f& operator=(const Vector2f&) = default;
+
+        // data
+        float x, y;
+    public:
+        cv::Point2f wrap() const;
+    };
+
     struct Vector {
         constexpr Vector(int aX, int aY) : x(aX), y(aY) {}
 
@@ -15,6 +48,10 @@ namespace fmo {
         // data
         int x, y;
     };
+
+    inline constexpr Vector2f operator-(const Vector2f& l, const Vector2f& r) { return {l.x - r.x, l.y - r.y}; }
+    inline constexpr Vector2f operator+(const Vector2f& l, const Vector2f& r) { return {l.x + r.x, l.y + r.y}; }
+    inline constexpr Vector2f operator/(const Vector2f& l, float r) { return {l.x / r, l.y / r}; }
 
     inline constexpr Vector operator-(const Pos& l, const Pos& r) { return {l.x - r.x, l.y - r.y}; }
     inline constexpr Vector operator-(const Pos16& l, const Pos16& r) { return{l.x - r.x, l.y - r.y}; }

@@ -182,7 +182,7 @@ public final class RecordingActivity extends Activity {
         if (!mConfig.disableDetection) {
             // C++ initialization
             Lib.detectionStart(mCamera.getWidth(), mCamera.getHeight(), mConfig.procRes,
-                    mConfig.gray, mHandler);
+                    mConfig.gray, mConfig.frontFacing, mHandler);
         }
 
         // refresh GUI
