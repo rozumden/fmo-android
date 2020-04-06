@@ -39,7 +39,7 @@ namespace fmo {
             int pixelSizeLog2 = 0;
             Image* input = &mSourceLevel.image;
 
-            for (; input->dims().height > mCfg.imageHeight; pixelSizeLog2++) {
+            for (; input->dims().height > mCfg.maxImageHeight; pixelSizeLog2++) {
                 if (int(mCache.subsampled.size()) == pixelSizeLog2) {
                     mCache.subsampled.emplace_back(new Image);
                 }

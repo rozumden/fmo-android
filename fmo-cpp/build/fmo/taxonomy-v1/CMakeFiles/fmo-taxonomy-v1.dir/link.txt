@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfmo-taxonomy-v1.a  CMakeFiles/fmo-taxonomy-v1.dir/algorithm-taxonomy.cpp.o CMakeFiles/fmo-taxonomy-v1.dir/components.cpp.o CMakeFiles/fmo-taxonomy-v1.dir/output.cpp.o CMakeFiles/fmo-taxonomy-v1.dir/visualization.cpp.o
-/usr/bin/ranlib libfmo-taxonomy-v1.a

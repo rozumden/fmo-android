@@ -1,7 +1,7 @@
 Executable : /home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
 arguments : 
 -C
-/home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a
+/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a
 fmo-android
 jvmArgs : 
 

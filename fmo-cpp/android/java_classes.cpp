@@ -79,6 +79,11 @@ namespace {
         jfieldID radius;
         jfieldID velocity;
         jfieldID predecessor;
+        jfieldID curveCenterX;
+        jfieldID curveCenterY;
+        jfieldID curveStart;
+        jfieldID curveEnd;
+        jfieldID curveRadius;
 
         DetectionBindings(JNIEnv* env) {
             jclass local = env->FindClass("cz/fmo/Lib$Detection");
@@ -96,6 +101,11 @@ namespace {
             length = env->GetFieldID(class_, "length", "F");
             radius = env->GetFieldID(class_, "radius", "F");
             velocity = env->GetFieldID(class_, "velocity", "F");
+            curveCenterX = env->GetFieldID(class_, "curveCenterX", "F");
+            curveCenterY = env->GetFieldID(class_, "curveCenterY", "F");
+            curveStart = env->GetFieldID(class_, "curveStart", "F");
+            curveEnd = env->GetFieldID(class_, "curveEnd", "F");
+            curveRadius = env->GetFieldID(class_, "curveRadius", "F");
             predecessor = env->GetFieldID(class_, "predecessor", "Lcz/fmo/Lib$Detection;");
         }
     };
@@ -116,6 +126,23 @@ Detection::Detection(JNIEnv* env, const fmo::Algorithm::Detection& det) :
     mEnv->SetFloatField(mObj, bDetection->length, det.object.length);
     mEnv->SetFloatField(mObj, bDetection->radius, det.object.radius);
     mEnv->SetFloatField(mObj, bDetection->velocity, det.object.velocity);
+
+
+    if(det.object.curve != nullptr && dynamic_cast<fmo::SCircle*>(det.object.curve) != nullptr ) {
+        auto *circle = dynamic_cast<fmo::SCircle*>(det.object.curve);
+        mEnv->SetFloatField(mObj, bDetection->curveCenterX, circle->x / (float) circle->scale);
+        mEnv->SetFloatField(mObj, bDetection->curveCenterY, circle->y / (float) circle->scale);
+        mEnv->SetFloatField(mObj, bDetection->curveStart, (float) circle->startDegreeSmooth);
+        mEnv->SetFloatField(mObj, bDetection->curveEnd, (float) circle->endDegreeSmooth);
+        mEnv->SetFloatField(mObj, bDetection->curveRadius, circle->radius / (float) circle->scale);
+    } else {
+        mEnv->SetFloatField(mObj, bDetection->curveCenterX, -1);
+        mEnv->SetFloatField(mObj, bDetection->curveCenterY, -1);
+        mEnv->SetFloatField(mObj, bDetection->curveStart, -1);
+        mEnv->SetFloatField(mObj, bDetection->curveEnd, -1);
+        mEnv->SetFloatField(mObj, bDetection->curveRadius, -1);
+    }
+
 }
 
 fmo::Pos Detection::getCenter() const {
@@ -131,6 +158,34 @@ float Detection::getRadius() const {
 Detection Detection::getPredecessor() const {
     jobject ref = mEnv->GetObjectField(mObj, bDetection->predecessor);
     return {mEnv, ref, true};
+}
+
+float Detection::getCircleCenterX() const {
+    return mEnv->GetFloatField(mObj, bDetection->curveCenterX);
+}
+
+float Detection::getCircleCenterY() const {
+    return mEnv->GetFloatField(mObj, bDetection->curveCenterY);
+}
+
+float Detection::getCircleStart() const {
+    float st = mEnv->GetFloatField(mObj, bDetection->curveStart);
+    float en = mEnv->GetFloatField(mObj, bDetection->curveEnd);
+    if(st >= 180 || en >= 180)
+        return en;
+    return st;
+}
+
+float Detection::getCircleEnd() const {
+    float st = mEnv->GetFloatField(mObj, bDetection->curveStart);
+    float en = mEnv->GetFloatField(mObj, bDetection->curveEnd);
+    if(st >= 180 || en >= 180)
+        return st;
+    return en;
+}
+
+float Detection::getCircleRadius() const {
+    return mEnv->GetFloatField(mObj, bDetection->curveRadius);
 }
 
 // DetectionArray

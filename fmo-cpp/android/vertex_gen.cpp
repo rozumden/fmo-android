@@ -15,6 +15,7 @@ JNIEXPORT void JNICALL Java_cz_fmo_Lib_generateCurve
     initJavaClasses(env);
     static constexpr float DECAY_BASE = 0.33f;
     static constexpr float DECAY_RATE = 0.50f;
+    static constexpr int SPLIT_CURVE = 7;
 
     // get data
     TriangleStripBuffers b(env, bObj, false);
@@ -34,28 +35,93 @@ JNIEXPORT void JNICALL Java_cz_fmo_Lib_generateCurve
     auto vA = shiftPoint(pos, radius, norm);
     auto vB = shiftPoint(pos, -radius, norm);
     color.a = DECAY_BASE + decay;
-    b.addVertex(vA, color);
-    b.addVertex(vA, color);
-    b.addVertex(vB, color);
+
+    auto curveRadius = d.getCircleRadius();
+    auto posPrev = pos;
+
+    if(curveRadius > 0) {
+        auto curveCenterX = d.getCircleCenterX();
+        auto curveCenterY = d.getCircleCenterY();
+        auto curveStart = d.getCircleStart();
+        auto curveEnd = d.getCircleEnd();
+        auto step = (curveStart - curveEnd)/SPLIT_CURVE;
+        float sign = (step > 0) - (step < 0);
+        int ii = 0;
+        for (float ang = curveEnd; sign*ang <= sign*curveStart; ang += step) {
+            pos = fmo::Pos{int(round(curveCenterX+curveRadius*cos(ang*3.14159265/180))), int(round(curveCenterY+curveRadius*sin(ang*3.14159265/180)))};
+            dir = fmo::NormVector(pos - posPrev);
+            if(ii == 0) {
+                posPrev = fmo::Pos{int(round(curveCenterX+curveRadius*cos((ang+step)*3.14159265/180))), int(round(curveCenterY+curveRadius*sin((ang+step)*3.14159265/180)))};
+                dir = fmo::NormVector(posPrev - pos);
+            }
+            norm = fmo::perpendicular(dir);
+            vA = shiftPoint(pos, radius, norm);
+            vB = shiftPoint(pos, -radius, norm);
+            if(ii == 0)
+                b.addVertex(vA, color);
+            b.addVertex(vA, color);
+            b.addVertex(vB, color);
+            color.a = DECAY_BASE + (decay *= DECAY_RATE);
+            posPrev = pos;
+            ii++;
+        }
+    } else {
+        b.addVertex(vA, color);
+        b.addVertex(vA, color);
+        b.addVertex(vB, color);
+    }
 
     while (true) {
+        if (dNext.isNull()) break;
+
         d = std::move(dNext);
         dNext = d.getPredecessor();
         pos = posNext;
 
-        if (dNext.isNull()) break;
-
-        posNext = dNext.getCenter();
-        dir = fmo::NormVector(posNext - pos);
-        auto normPrev = norm;
-        norm = fmo::perpendicular(dir);
-        auto normAvg = fmo::average(norm, normPrev);
+        auto radiusPrev = radius;
         radius = d.getRadius();
-        vA = shiftPoint(pos, radius, normAvg);
-        vB = shiftPoint(pos, -radius, normAvg);
+
         color.a = DECAY_BASE + (decay *= DECAY_RATE);
-        b.addVertex(vA, color);
-        b.addVertex(vB, color);
+
+        curveRadius = d.getCircleRadius();
+        if(curveRadius > 0) {
+            auto curveCenterX = d.getCircleCenterX();
+            auto curveCenterY = d.getCircleCenterY();
+            auto curveStart = d.getCircleStart();
+            auto curveEnd = d.getCircleEnd();
+            if(curveStart > 0 && curveEnd < 0) {
+
+                curveStart = d.getCircleStart();
+            }
+
+            auto step = (curveStart - curveEnd)/SPLIT_CURVE;
+            float sign = (step > 0) - (step < 0);
+            for (float ang = curveEnd+step; sign*ang <= sign*curveStart; ang += step) {
+                pos = fmo::Pos{int(round(curveCenterX+curveRadius*cos(ang*3.14159265/180))), int(round(curveCenterY+curveRadius*sin(ang*3.14159265/180)))};
+                dir = fmo::NormVector(pos - posPrev);
+                norm = fmo::perpendicular(dir);
+                auto radiusCurrent = (d.getRadius() + radiusPrev)/2;
+                vA = shiftPoint(pos, radiusCurrent, norm);
+                vB = shiftPoint(pos, -radiusCurrent, norm);
+                radiusPrev = radiusCurrent;
+                b.addVertex(vA, color);
+                b.addVertex(vB, color);
+                color.a = DECAY_BASE + (decay *= DECAY_RATE);
+                posNext = pos;
+            }
+        } else {
+            if (dNext.isNull()) break;
+            posNext = dNext.getCenter();
+            dir = fmo::NormVector(posNext - pos);
+            auto normPrev = norm;
+            norm = fmo::perpendicular(dir);
+
+            auto normAvg = fmo::average(norm, normPrev);
+            vA = shiftPoint(pos, radius, normAvg);
+            vB = shiftPoint(pos, -radius, normAvg);
+            b.addVertex(vA, color);
+            b.addVertex(vB, color);
+        }
         decay *= DECAY_RATE;
     }
 

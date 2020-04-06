@@ -1,19 +1,19 @@
 The target system is: Android - 1 - armv7-a
 The host system is: Linux - 4.4.0-143-generic - x86_64
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_aca45"
-[1/2] Building C object CMakeFiles/cmTC_aca45.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_aca45
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_af6d2"
+[1/2] Building C object CMakeFiles/cmTC_af6d2.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_af6d2
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_0c3eb"
-[1/2] Building C object CMakeFiles/cmTC_0c3eb.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_0c3eb
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_b89ef"
+[1/2] Building C object CMakeFiles/cmTC_b89ef.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_b89ef
 Android clang version 3.8.275480  (based on LLVM 3.8.275480)
 Target: armv7-none-linux-android
 Thread model: posix
@@ -25,16 +25,16 @@ Candidate multilib: armv7-a;@armv7
 Candidate multilib: armv7-a/thumb;@armv7@thumb
 Candidate multilib: .;
 Selected multilib: armv7-a/thumb;@armv7@thumb
- "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_0c3eb /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_0c3eb.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o
+ "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_b89ef /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_b89ef.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_0c3eb"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_0c3eb.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_0c3eb]
+  ignore line: [Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_b89ef"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_b89ef.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_b89ef]
   ignore line: [Android clang version 3.8.275480  (based on LLVM 3.8.275480)]
   ignore line: [Target: armv7-none-linux-android]
   ignore line: [Thread model: posix]
@@ -51,7 +51,7 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [Selected multilib: armv7-a/thumb]
   ignore line: [@armv7@thumb]
-  link line: [ "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_0c3eb /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_0c3eb.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o]
+  link line: [ "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_b89ef /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_b89ef.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o]
     arg [/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld] ==> ignore
     arg [--sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm] ==> ignore
     arg [-pie] ==> ignore
@@ -63,7 +63,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_0c3eb] ==> ignore
+    arg [cmTC_b89ef] ==> ignore
     arg [/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> dir [/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
     arg [-L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb] ==> dir [/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb]
@@ -90,7 +90,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_0c3eb.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_b89ef.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [-lc] ==> lib [c]
@@ -110,11 +110,11 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_be0b7"
-[1/2] Building C object CMakeFiles/cmTC_be0b7.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_be0b7
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_ab689"
+[1/2] Building C object CMakeFiles/cmTC_ab689.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_ab689
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -124,11 +124,11 @@ Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "c
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_95ac9"
-[1/2] Building C object CMakeFiles/cmTC_95ac9.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_95ac9
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_93aa7"
+[1/2] Building C object CMakeFiles/cmTC_93aa7.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_93aa7
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -138,11 +138,11 @@ Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "c
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_34250"
-[1/2] Building C object CMakeFiles/cmTC_34250.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_34250
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_d0c55"
+[1/2] Building C object CMakeFiles/cmTC_d0c55.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_d0c55
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -150,19 +150,19 @@ Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "c
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_a6883"
-[1/2] Building CXX object CMakeFiles/cmTC_a6883.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_a6883
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_91e26"
+[1/2] Building CXX object CMakeFiles/cmTC_91e26.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_91e26
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_1a588"
-[1/2] Building CXX object CMakeFiles/cmTC_1a588.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_1a588
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_75db5"
+[1/2] Building CXX object CMakeFiles/cmTC_75db5.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_75db5
 Android clang version 3.8.275480  (based on LLVM 3.8.275480)
 Target: armv7-none-linux-android
 Thread model: posix
@@ -174,16 +174,16 @@ Candidate multilib: armv7-a;@armv7
 Candidate multilib: armv7-a/thumb;@armv7@thumb
 Candidate multilib: .;
 Selected multilib: armv7-a/thumb;@armv7@thumb
- "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_1a588 /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1a588.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o
+ "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_75db5 /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_75db5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_1a588"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_1a588.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_1a588]
+  ignore line: [Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_75db5"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_75db5.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_75db5]
   ignore line: [Android clang version 3.8.275480  (based on LLVM 3.8.275480)]
   ignore line: [Target: armv7-none-linux-android]
   ignore line: [Thread model: posix]
@@ -200,7 +200,7 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [Selected multilib: armv7-a/thumb]
   ignore line: [@armv7@thumb]
-  link line: [ "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_1a588 /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1a588.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o]
+  link line: [ "/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm -pie -z relro -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_75db5 /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib -L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_75db5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtend_android.o]
     arg [/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld] ==> ignore
     arg [--sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm] ==> ignore
     arg [-pie] ==> ignore
@@ -212,7 +212,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1a588] ==> ignore
+    arg [cmTC_75db5] ==> ignore
     arg [/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm/usr/lib/../lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> dir [/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
     arg [-L/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb] ==> dir [/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb]
@@ -239,7 +239,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_1a588.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_75db5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc] ==> lib [gcc]
@@ -263,11 +263,11 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_8ccf5"
-[1/2] Building CXX object CMakeFiles/cmTC_8ccf5.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_8ccf5
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_02dbc"
+[1/2] Building CXX object CMakeFiles/cmTC_02dbc.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_02dbc
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -330,11 +330,11 @@ Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "c
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_31fee"
-[1/2] Building CXX object CMakeFiles/cmTC_31fee.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_31fee
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_e191e"
+[1/2] Building CXX object CMakeFiles/cmTC_e191e.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_e191e
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -397,11 +397,11 @@ Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "c
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_b8dbd"
-[1/2] Building CXX object CMakeFiles/cmTC_b8dbd.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_b8dbd
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_0eb6d"
+[1/2] Building CXX object CMakeFiles/cmTC_0eb6d.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_0eb6d
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -464,11 +464,11 @@ Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "c
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_82141"
-[1/2] Building CXX object CMakeFiles/cmTC_82141.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_82141
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_9e406"
+[1/2] Building CXX object CMakeFiles/cmTC_9e406.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_9e406
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -529,21 +529,21 @@ Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "c
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_39b40"
-[1/2] Building C object CMakeFiles/cmTC_39b40.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_39b40
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_9db43"
+[1/2] Building C object CMakeFiles/cmTC_9db43.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_9db43
 
 
 Determining if the pthread_create exist passed with the following output:
-Change Dir: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
+Change Dir: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_10d4c"
-[1/2] Building C object CMakeFiles/cmTC_10d4c.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_10d4c
+Run Build Command:"/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_18c51"
+[1/2] Building C object CMakeFiles/cmTC_18c51.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_18c51
 
-File /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 

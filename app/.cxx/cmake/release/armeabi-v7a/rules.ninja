@@ -117,6 +117,44 @@ rule CXX_STATIC_LIBRARY_LINKER__fmo-median-v1
 #############################################
 # Rule for compiling CXX files.
 
+rule CXX_COMPILER__fmo-median-v2
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /home/rozumden/Android/android-ndk-r14b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi --gcc-toolchain=/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__fmo-median-v2
+  command = $PRE_LINK && /home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -E remove $TARGET_FILE && /home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__fmo-taxonomy-v1
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /home/rozumden/Android/android-ndk-r14b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi --gcc-toolchain=/home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 --sysroot=/home/rozumden/Android/android-ndk-r14b/platforms/android-21/arch-arm  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__fmo-taxonomy-v1
+  command = $PRE_LINK && /home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -E remove $TARGET_FILE && /home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/rozumden/Android/android-ndk-r14b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
 rule CXX_COMPILER__fmo-android
   depfile = $DEP_FILE
   deps = gcc
@@ -137,7 +175,7 @@ rule CXX_SHARED_LIBRARY_LINKER__fmo-android
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/rozumden/src/fmo-android/fmo-cpp -B/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a
+  command = /home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/rozumden/src/fmo-android-denys/fmo-cpp -B/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a
   description = Re-running CMake...
   generator = 1
 

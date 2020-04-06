@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfmo-explorer-v3.a  CMakeFiles/fmo-explorer-v3.dir/clusters.cpp.o CMakeFiles/fmo-explorer-v3.dir/components.cpp.o CMakeFiles/fmo-explorer-v3.dir/explorer.cpp.o CMakeFiles/fmo-explorer-v3.dir/object.cpp.o CMakeFiles/fmo-explorer-v3.dir/preprocess.cpp.o CMakeFiles/fmo-explorer-v3.dir/strips-proto.cpp.o CMakeFiles/fmo-explorer-v3.dir/strips-meta.cpp.o CMakeFiles/fmo-explorer-v3.dir/visualize.cpp.o
-/usr/bin/ranlib libfmo-explorer-v3.a

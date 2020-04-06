@@ -1,59 +1,73 @@
 {
   "buildFiles": [
-    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVConfig.cmake",
-    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/OpenCVConfig-version.cmake",
-    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v1/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVConfig.cmake",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/taxonomy-v1/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/OpenCV-android-sdk/sdk/native/jni/OpenCVConfig-version.cmake",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/explorer-v1/CMakeLists.txt",
     "/home/rozumden/Android/android-ndk-r14b/build/cmake/android.toolchain.cmake",
-    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v3/CMakeLists.txt",
-    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/CMakeLists.txt",
-    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/OpenCVConfig.cmake",
-    "/home/rozumden/src/fmo-android/fmo-cpp/CMakeLists.txt",
-    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/median-v1/CMakeLists.txt",
-    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVModules.cmake",
-    "/home/rozumden/src/fmo-android/fmo-cpp/android/CMakeLists.txt",
-    "/home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2/CMakeLists.txt",
-    "/home/rozumden/src/fmo-android/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVModules-release.cmake"
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/explorer-v3/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/OpenCV-android-sdk/sdk/native/jni/OpenCVConfig.cmake",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/median-v1/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVModules.cmake",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/android/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/explorer-v2/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/median-v2/CMakeLists.txt",
+    "/home/rozumden/src/fmo-android-denys/OpenCV-android-sdk/sdk/native/jni/abi-armeabi-v7a/OpenCVModules-release.cmake"
   ],
   "cleanCommands": [
-    "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" clean"
+    "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" clean"
   ],
-  "buildTargetsCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
+    "fmo-median-v2-Release-armeabi-v7a": {
+      "artifactName": "fmo-median-v2",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-median-v2",
+      "abi": "armeabi-v7a",
+      "output": "/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/median-v2/libfmo-median-v2.a"
+    },
     "fmo-explorer-v2-Release-armeabi-v7a": {
       "artifactName": "fmo-explorer-v2",
-      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v2",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v2",
       "abi": "armeabi-v7a",
-      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v2/libfmo-explorer-v2.a"
+      "output": "/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v2/libfmo-explorer-v2.a"
     },
     "fmo-android-Release-armeabi-v7a": {
       "artifactName": "fmo-android",
-      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-android",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-android",
       "abi": "armeabi-v7a",
-      "output": "/home/rozumden/src/fmo-android/app/build/intermediates/cmake/release/obj/armeabi-v7a/libfmo-android.so"
+      "output": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/cmake/release/obj/armeabi-v7a/libfmo-android.so"
     },
     "fmo-explorer-v1-Release-armeabi-v7a": {
       "artifactName": "fmo-explorer-v1",
-      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v1",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v1",
       "abi": "armeabi-v7a",
-      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v1/libfmo-explorer-v1.a"
+      "output": "/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v1/libfmo-explorer-v1.a"
     },
     "fmo-median-v1-Release-armeabi-v7a": {
       "artifactName": "fmo-median-v1",
-      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-median-v1",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-median-v1",
       "abi": "armeabi-v7a",
-      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/median-v1/libfmo-median-v1.a"
+      "output": "/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/median-v1/libfmo-median-v1.a"
+    },
+    "fmo-taxonomy-v1-Release-armeabi-v7a": {
+      "artifactName": "fmo-taxonomy-v1",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-taxonomy-v1",
+      "abi": "armeabi-v7a",
+      "output": "/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/taxonomy-v1/libfmo-taxonomy-v1.a"
     },
     "fmo-core-Release-armeabi-v7a": {
       "artifactName": "fmo-core",
-      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-core",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-core",
       "abi": "armeabi-v7a",
-      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/libfmo-core.a"
+      "output": "/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/libfmo-core.a"
     },
     "fmo-explorer-v3-Release-armeabi-v7a": {
       "artifactName": "fmo-explorer-v3",
-      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v3",
+      "buildCommand": "/home/rozumden/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a\" fmo-explorer-v3",
       "abi": "armeabi-v7a",
-      "output": "/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v3/libfmo-explorer-v3.a"
+      "output": "/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v3/libfmo-explorer-v3.a"
     }
   }
 }

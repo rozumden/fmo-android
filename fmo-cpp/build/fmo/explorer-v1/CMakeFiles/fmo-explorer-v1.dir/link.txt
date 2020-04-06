@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfmo-explorer-v1.a  CMakeFiles/fmo-explorer-v1.dir/components.cpp.o CMakeFiles/fmo-explorer-v1.dir/explorer.cpp.o CMakeFiles/fmo-explorer-v1.dir/object.cpp.o CMakeFiles/fmo-explorer-v1.dir/preprocess.cpp.o CMakeFiles/fmo-explorer-v1.dir/strips.cpp.o CMakeFiles/fmo-explorer-v1.dir/trajectories.cpp.o CMakeFiles/fmo-explorer-v1.dir/visualize.cpp.o
-/usr/bin/ranlib libfmo-explorer-v1.a

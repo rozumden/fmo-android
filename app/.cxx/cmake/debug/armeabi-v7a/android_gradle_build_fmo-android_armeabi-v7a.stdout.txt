@@ -1,6 +1,8 @@
-ninja: Entering directory `/home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a'
+ninja: Entering directory `/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a'
 [0/1] Re-running CMake...
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/rozumden/src/fmo-android/app/.cxx/cmake/debug/armeabi-v7a
-ninja: no work to do.
+-- Build files have been written to: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a
+[1/3] Building CXX object fmo/taxonomy-v1/CMakeFiles/fmo-taxonomy-v1.dir/output.cpp.o
+[2/3] Linking CXX static library fmo/taxonomy-v1/libfmo-taxonomy-v1.a
+[3/3] Linking CXX shared library /home/rozumden/src/fmo-android-denys/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libfmo-android.so

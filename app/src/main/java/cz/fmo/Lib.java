@@ -56,6 +56,11 @@ public final class Lib {
         public float length;      // length of the object in input image pixels
         public float radius;      // radius of the object in input image pixels
         public float velocity;    // velocity of the object in pixels per frame
+        public float curveCenterX;// fitted curve: center, X coordinate
+        public float curveCenterY;// fitted curve: center, Y coordinate
+        public float curveStart;  // fitted curve: start degree
+        public float curveEnd;    // fitted curve: end degree
+        public float curveRadius; // fitted curve: radius of fitted circle
 
         // Java-specific
         public Detection predecessor;

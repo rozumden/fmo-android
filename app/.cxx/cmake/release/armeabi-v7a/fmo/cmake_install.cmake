@@ -1,4 +1,4 @@
-# Install script for directory: /home/rozumden/src/fmo-android/fmo-cpp/fmo
+# Install script for directory: /home/rozumden/src/fmo-android-denys/fmo-cpp/fmo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,10 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v1/cmake_install.cmake")
-  include("/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v2/cmake_install.cmake")
-  include("/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v3/cmake_install.cmake")
-  include("/home/rozumden/src/fmo-android/app/.cxx/cmake/release/armeabi-v7a/fmo/median-v1/cmake_install.cmake")
+  include("/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v1/cmake_install.cmake")
+  include("/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v2/cmake_install.cmake")
+  include("/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/explorer-v3/cmake_install.cmake")
+  include("/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/median-v1/cmake_install.cmake")
+  include("/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/median-v2/cmake_install.cmake")
+  include("/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/release/armeabi-v7a/fmo/taxonomy-v1/cmake_install.cmake")
 
 endif()
 

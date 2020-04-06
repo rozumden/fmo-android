@@ -39,7 +39,7 @@ namespace fmo {
 
              detObj.scale = mProcessingLevel.scale;
              detObj.radius = o.radius;
-             detObj.velocity = o.velocity;
+             detObj.velocity = o.velocity * o.radius / detObj.scale;
 
              out.detections.emplace_back();
              if(o.prevId == -1)

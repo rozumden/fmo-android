@@ -1,4 +1,4 @@
-# Install script for directory: /home/rozumden/src/fmo-android/fmo-cpp/fmo/explorer-v2
+# Install script for directory: /home/rozumden/src/fmo-android-denys/fmo-cpp/fmo/explorer-v2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -15,5 +15,5 @@ Looking for pthread.h - found
 Looking for pthread_create
 Looking for pthread_create - found
 Found Threads: TRUE  
-Found OpenCV: /home/rozumden/src/fmo-android/OpenCV-android-sdk (found version "3.4.9") 
+Found OpenCV: /home/rozumden/src/fmo-android-denys/OpenCV-android-sdk (found suitable version "3.4.9", minimum required is "3.0.0") 
 Configuring done

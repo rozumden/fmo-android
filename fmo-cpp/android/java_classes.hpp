@@ -71,6 +71,16 @@ struct Detection : public Object {
 
     float getRadius() const;
 
+    float getCircleCenterX() const;
+
+    float getCircleCenterY() const;
+
+    float getCircleStart() const;
+
+    float getCircleEnd() const;
+
+    float getCircleRadius() const;
+
     Detection getPredecessor() const;
 
     friend struct DetectionArray;

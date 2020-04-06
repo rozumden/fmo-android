@@ -52,7 +52,7 @@ namespace {
                 input.flip();
 
             explorer->setInputSwap(input);
-            explorer->getOutput(output);
+            explorer->getOutput(output,true);
 
             bool statsUpdated = sectionStats.stop();
 
@@ -65,9 +65,9 @@ namespace {
                 jint numDetections = jint(output.detections.size());
                 DetectionArray detections(env, numDetections);
 
-                std::ostringstream oss;
-                oss << std::fixed << std::setprecision(2) << "Received output, size: " << output.detections.size() << ", id " << output.detections[0]->object.id << ", id0 " << output.detections[0]->predecessor.id;
-                callback.log(oss.str().c_str());
+//                std::ostringstream oss;
+//                oss << std::fixed << std::setprecision(2) << "Received output, size: " << output.detections.size() << ", id " << output.detections[0]->object.id << ", id0 " << output.detections[0]->predecessor.id;
+//                callback.log(oss.str().c_str());
 
                 for (jint i = 0; i < numDetections; i++) {
                     Detection d{env, *output.detections[i]};
