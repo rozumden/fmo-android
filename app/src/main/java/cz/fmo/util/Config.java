@@ -51,16 +51,16 @@ public final class Config {
     }
 
     private VelocityEstimationMode getVelocityEstimationMode(SharedPreferences p) {
-        String s = p.getString("velocityEstimationMode", "pxfr");
+        String s = p.getString("velocityEstimationMode", "kmh");
         switch (s) {
             case "ms":
                 return VelocityEstimationMode.M_S;
-            case "kmh":
-                return VelocityEstimationMode.KM_H;
             case "mph":
                 return VelocityEstimationMode.MPH;
-            default:
+            case "pxfr":
                 return VelocityEstimationMode.PX_FR;
+            default:
+                return VelocityEstimationMode.KM_H;
         }
     }
 
@@ -75,7 +75,7 @@ public final class Config {
     }
 
     private float getObjectRadius(SharedPreferences p) {
-        float diameter = getFloatFromString(p, "objectDiameterPicker", "0");
+        float diameter = getFloatFromString(p, "objectDiameterPicker", "0.072");
 
         if (diameter == 0) {
             diameter = getFloatFromString(p, "objectDiameterCustom", "1.00");

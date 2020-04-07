@@ -3,5 +3,4 @@ ninja: Entering directory `/home/rozumden/src/fmo-android-denys/app/.cxx/cmake/d
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/rozumden/src/fmo-android-denys/app/.cxx/cmake/debug/armeabi-v7a
-[1/2] Building CXX object android/CMakeFiles/fmo-android.dir/vertex_gen.cpp.o
-[2/2] Linking CXX shared library /home/rozumden/src/fmo-android-denys/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libfmo-android.so
+ninja: no work to do.

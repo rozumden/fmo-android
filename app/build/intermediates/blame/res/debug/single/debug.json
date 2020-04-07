@@ -8,8 +8,20 @@
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/record_manual_stopped.xml"
     },
     {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_fmo_ic_launcher.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xxxhdpi/fmo_ic_launcher.png"
+    },
+    {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/layout_activity_recording.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/layout/activity_recording.xml"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-mdpi_fmo_ic_launcher_round.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-mdpi/fmo_ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_fmo_ic_launcher_foreground.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xxxhdpi/fmo_ic_launcher_foreground.png"
     },
     {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_settings_capture.xml.flat",
@@ -18,6 +30,10 @@
     {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_settings_advanced.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/settings_advanced.xml"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xhdpi_fmo_ic_launcher.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xhdpi/fmo_ic_launcher.png"
     },
     {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
@@ -32,6 +48,10 @@
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-mdpi_fmo_ic_launcher_foreground.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-mdpi/fmo_ic_launcher_foreground.png"
+    },
+    {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_settings_detection.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/settings_detection.xml"
     },
@@ -44,8 +64,20 @@
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/xml/pref_detection.xml"
     },
     {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_fmo_ic_launcher_background.xml.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/fmo_ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_fmo_ic_launcher_round.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xxhdpi/fmo_ic_launcher_round.png"
+    },
+    {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_settings_velocity.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/settings_velocity.xml"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xhdpi_fmo_ic_launcher_round.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xhdpi/fmo_ic_launcher_round.png"
     },
     {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -58,6 +90,18 @@
     {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_record_manual_running.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/record_manual_running.xml"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_fmo_ic_launcher.xml.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-anydpi-v26/fmo_ic_launcher.xml"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_fmo_ic_launcher.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xxhdpi/fmo_ic_launcher.png"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_fmo_ic_launcher_round.xml.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-anydpi-v26/fmo_ic_launcher_round.xml"
     },
     {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/layout_activity_playback.xml.flat",
@@ -76,6 +120,10 @@
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/record_automatic_running.xml"
     },
     {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable-v24_fmo_ic_launcher_foreground.xml.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable-v24/fmo_ic_launcher_foreground.xml"
+    },
+    {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_settings.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/settings.xml"
     },
@@ -88,12 +136,40 @@
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/xml/pref_velocity.xml"
     },
     {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-hdpi_fmo_ic_launcher_round.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-hdpi/fmo_ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-hdpi_fmo_ic_launcher_foreground.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-hdpi/fmo_ic_launcher_foreground.png"
+    },
+    {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/drawable_record_automatic_stopped.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/drawable/record_automatic_stopped.xml"
     },
     {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xhdpi_fmo_ic_launcher_foreground.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xhdpi/fmo_ic_launcher_foreground.png"
+    },
+    {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/xml_backup_rules.xml.flat",
         "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_fmo_ic_launcher_round.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xxxhdpi/fmo_ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_fmo_ic_launcher_foreground.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-xxhdpi/fmo_ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-mdpi_fmo_ic_launcher.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-mdpi/fmo_ic_launcher.png"
+    },
+    {
+        "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/mipmap-hdpi_fmo_ic_launcher.png.flat",
+        "source": "/home/rozumden/src/fmo-android-denys/app/src/main/res/mipmap-hdpi/fmo_ic_launcher.png"
     },
     {
         "merged": "/home/rozumden/src/fmo-android-denys/app/build/intermediates/res/merged/debug/layout_activity_benchmarking.xml.flat",

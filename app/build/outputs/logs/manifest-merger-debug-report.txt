@@ -95,7 +95,7 @@ MERGED from [com.android.support:support-compat:25.4.0] /home/rozumden/.gradle/c
 	android:fullBackupContent
 		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:26:9-54
 	android:icon
-		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:27:9-43
+		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:27:9-47
 	android:allowBackup
 		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:25:9-35
 	android:theme
@@ -105,7 +105,7 @@ ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml
 	android:screenOrientation
 		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:35:13-50
 	android:label
-		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:34:13-32
+		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:34:13-47
 	android:configChanges
 		ADDED from /home/rozumden/src/fmo-android-denys/app/src/main/AndroidManifest.xml:33:13-37
 	android:theme
