@@ -1,4 +1,4 @@
-#Mon Apr 06 18:15:31 CEST 2020
+#Tue Apr 07 14:00:28 CEST 2020
 base.0=/home/rozumden/src/fmo-android-denys/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

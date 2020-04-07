@@ -89,25 +89,24 @@ JNIEXPORT void JNICALL Java_cz_fmo_Lib_generateCurve
             auto curveCenterY = d.getCircleCenterY();
             auto curveStart = d.getCircleStart();
             auto curveEnd = d.getCircleEnd();
-            if(curveStart > 0 && curveEnd < 0) {
-
-                curveStart = d.getCircleStart();
-            }
 
             auto step = (curveStart - curveEnd)/SPLIT_CURVE;
             float sign = (step > 0) - (step < 0);
             for (float ang = curveEnd+step; sign*ang <= sign*curveStart; ang += step) {
                 pos = fmo::Pos{int(round(curveCenterX+curveRadius*cos(ang*3.14159265/180))), int(round(curveCenterY+curveRadius*sin(ang*3.14159265/180)))};
                 dir = fmo::NormVector(pos - posPrev);
+                auto normPrev = norm;
                 norm = fmo::perpendicular(dir);
-                auto radiusCurrent = (d.getRadius() + radiusPrev)/2;
-                vA = shiftPoint(pos, radiusCurrent, norm);
-                vB = shiftPoint(pos, -radiusCurrent, norm);
-                radiusPrev = radiusCurrent;
+                float radiusAvg = (d.getRadius() + radiusPrev)/2.0f;
+                auto normAvg = fmo::average(norm, normPrev);
+                vA = shiftPoint(pos, radiusAvg, normAvg);
+                vB = shiftPoint(pos, -radiusAvg, normAvg);
+                radiusPrev = radiusAvg;
                 b.addVertex(vA, color);
                 b.addVertex(vB, color);
                 color.a = DECAY_BASE + (decay *= DECAY_RATE);
                 posNext = pos;
+                posPrev = pos;
             }
         } else {
             if (dNext.isNull()) break;
